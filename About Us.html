@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About – The Unlabel Network</title>
+<meta name="description" content="More than a label. More than a diagnosis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* --navy:#003370;
+  --ink:#1c2230; */
+  --mist: #bfcbdd;
+  --steel: #41648f;
+  --white: #fff;
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bg: #f6f5f2;
+  --card: #fff;
+  --ink: #161b3d;
+  --text: #2b2a33;
+  --muted: #5f5c69;
+  --line: #dcd8d0;
+  --navy: #161b3d;
+  --accent: #c4673a;
+  --soft: #f3e0d3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1226;
+    --card: #191d38;
+    --ink: #f1efe9;
+    --text: #dcd9e3;
+    --muted: #a7a4b4;
+    --line: #2c3052;
+    --navy: #0a0c1c;
+    --accent: #f0a574;
+    --soft: #3a2c2d;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Newsreader, Georgia, serif;
+  color: var(--ink);
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: #1c2143;
+  background-color: #f8f6f1;
+  line-height: 1.5rem;
+  /* font-size:1.25rem; */
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font:
+    17px/1.6 Manrope,
+    sans-serif;
+}
+ul.lead li {
+  font-size: 25pt;
+  line-height: 50px;
+  margin-left: 10px;
+  list-style: disc;
+}
+a {
+  color: inherit;
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: #ff7f50;
+  border-top: 2px solid #ff7f50;
+  margin: 0;
+  border: 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--steel);
+  outline-offset: 3px;
+}
+
+/* Header + mobile menu */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.5rem;
+  background: var(--white);
+  border-bottom: 1px solid var(--mist);
+  color: #1c2143;
+}
+
+.brand {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.menu-toggle {
+  background: none;
+  border: 0;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  gap: 7px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: var(--navy);
+  transition: transform 0.25s;
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(4.5px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-4.5px) rotate(-45deg);
+}
+.nav {
+  position: fixed;
+  inset: 0;
+  background: var(--white);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding-top: 7rem;
+  z-index: -1;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav a:hover{
+  color: #ff7f50
+}
+
+
+a {
+  font-size: 30px;
+}
+
+/* hero section */
+
+.hero {
+  background: var(--navy);
+  color: #f6f5f2;
+  padding-top: 24px;
+  box-sizing: border-box;
+  border-left: #1c2143 solid 15px;
+  border-bottom: #1c2143 solid 15px;
+}
+
+.hero h1 {
+  color: #f6f5f2;
+  font-size: clamp(44px, 9vw, 96px);
+  margin: 56px 0 0;
+  max-width: 12ch;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.hero s {
+  text-decoration-color: var(--accent);
+  opacity: 0.6;
+}
+
+.hero p {
+  max-width: 54ch;
+  font-size: 19px;
+  margin: 18px 0 48px;
+}
+
+.logo {
+  font:
+    600 18px Newsreader,
+    serif;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* .hero-p{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #d16740;
+  font-size: 30px;
+}
+
+.hero{
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+.hero-h1{
+  color: #202d35;
+  line-height: 1.8;
+  text-wrap: balance;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 64ch;
+  margin-left: 5rem;
+  font-size: 30px;
+  letter-spacing: 3px;
+  border-left: 5px solid;
+  border-bottom: 5px solid;
+  margin-left: -1rem;
+  margin-right: 1.5rem;
+  padding-left: 20px;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* brand-strip */
+
+.branded-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #b82121;
+  margin-top: 10px;
+}
+
+.branded-strip i {
+  color: #b65f45;
+  font-size: 25px;
+  font-style: normal;
+}
+
+/* section-2 */
+
+.section-2 {
+  border-left: 10px solid blue;
+  border-bottom: 10px solid blue;
+  
+  .motto {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .unlabelDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  .unlabel-img {
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 90%;
+  }
+}
+
+/* ooooooooooooooooooooooooooooooo */
+
+.logo {
+  font:
+    600 18px Newsreader,
+    serif;
+}
+
+nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-top: 1px solid #fff3;
+}
+
+nav .wrap {
+  display: flex;
+  overflow-x: auto;
+}
+
+nav label {
+  padding: 15px 16px;
+  color: #f6f5f2b0;
+  font-weight: 700;
+  font-size: 20px;
+  white-space: nowrap;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+/* ---------- Tab switching with no JavaScript ---------- */
+input[name="tab"] {
+  display: none;
+}
+/* hidden radios */
+
+.panel {
+  display: none;
+}
+
+#t1:checked ~ main #p1,
+#t2:checked ~ main #p2,
+#t3:checked ~ main #p3,
+#t4:checked ~ main #p4,
+#t5:checked ~ main #p5 {
+  display: block;
+}
+
+#t1:checked ~ header label[for="t1"],
+#t2:checked ~ header label[for="t2"],
+#t3:checked ~ header label[for="t3"],
+#t4:checked ~ header label[for="t4"],
+#t5:checked ~ header label[for="t5"] {
+  color: #f6f5f2;
+  border-color: var(--accent);
+}
+
+input:focus-visible ~ header nav {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+/* ---------- Content ---------- */
+main {
+  padding: 48px 22px 70px;
+}
+
+h2 {
+  font-size: clamp(30px, 5vw, 44px);
+}
+
+.lead {
+  font-size: 19px;
+  max-width: 60ch;
+  margin-bottom: 28px;
+}
+
+ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+li {
+  margin: 7px 0;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+.pillar {
+  background: var(--soft);
+  border-radius: 14px;
+  padding: 20px;
+}
+.pillar p {
+  margin: 0;
+  font-size: 15.5px;
+}
+
+details {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  padding: 4px 24px;
+}
+
+summary {
+  cursor: pointer;
+  padding: 18px 0;
+  font:
+    600 23px Newsreader,
+    serif;
+  color: var(--ink);
+}
+
+summary small {
+  display: block;
+  font:
+    700 14px Manrope,
+    sans-serif;
+  color: var(--accent);
+}
+
+details p {
+  margin: 0 0 14px;
+  max-width: 68ch;
+}
+
+ol.steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: n;
+}
+
+.steps li {
+  counter-increment: n;
+}
+
+.steps li::before {
+  content: counter(n);
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.steps b {
+  display: block;
+  font:
+    600 19px Newsreader,
+    serif;
+  color: var(--ink);
+}
+
+.chart {
+  display: grid;
+  gap: 12px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.node {
+  flex: 1 1 200px;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  padding: 14px;
+  background: var(--card);
+}
+
+.node b {
+  display: block;
+  font:
+    600 18px Newsreader,
+    serif;
+  color: var(--ink);
+}
+
+.node small {
+  color: var(--muted);
+}
+
+.node.future {
+  border-style: dashed;
+  background: none;
+}
+
+.node.dept {
+  border-color: var(--accent);
+  background: var(--soft);
+}
+
+/* .stat {
+     background: var(--navy);
+      color: #f6f5f2;
+       border-radius: 14px;
+        padding: 26px 22px;
+     }
+
+  .stat b {
+     display: block;
+      font: 600 70px/1 Newsreader, serif;
+       color: var(--accent);
+     } */
+
+.cta {
+  background: var(--soft);
+  border-radius: 18px;
+  padding: 5px 5px;
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.bttn
+{
+  border: 20px solid #f8efe7;
+  background-color: #f8efe7;
+  color: #0a0c1c;
+  font-weight: 900;
+  font-size: 25px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.cta-text{
+  font-size: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 999px;
+  font-size: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--ink);
+  color: var(--bg);
+}
+
+/* FOOTER */
+
+/* Footer */
+.footer{
+  text-align:center;
+  background-color: #1c2143;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.lgo{
+  width: 170px;
+}
+
+/* .footer{ */
+.logo-text{
+  font-size: 1.5rem;
+  color:#f8efe7;
+}
+
+p{
+  font-size: 20px;
+  color: #f8efe7;
+}
+
+/* FOOTER */
+
+/* FOOTER */
+
+/* Footer: dark layout, drop-in. All classes start with .tun-footer so nothing clashes with page CSS */
+.tun-footer {
+  --f-bg: #1c2143;
+  --f-text: #f8efe7;
+  --f-muted: #b9c0d8;
+  --f-line: #434b73;
+  --f-accent: #ff7f50;
+  background: var(--f-bg);
+  color: var(--f-text);
+  font-family: var(--sans, "Hanken Grotesk", system-ui, sans-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 6px solid var(--f-accent);
+  padding: clamp(2rem, 6vw, 3.5rem) 0
+    calc(2rem + env(safe-area-inset-bottom, 0px));
+}
+.tun-footer * {
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+.tun-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tun-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.tun-footer a:focus-visible {
+  outline: 3px solid var(--f-accent);
+  outline-offset: 3px;
+}
+.tun-footer__wrap {
+  width: min(100% - 2.5rem, 72rem);
+  margin-inline: auto;
+}
+.tun-footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem clamp(1rem, 4vw, 2rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+}
+.tun-footer__logo {
+  display: block;
+  width: clamp(120px, 30vw, 190px);
+  height: auto;
+}
+.tun-footer .tun-footer__social {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: clamp(0.9rem, 3.5vw, 1.6rem);
+  margin: 0;
+}
+.tun-footer__social a {
+  display: block;
+  width: clamp(36px, 9vw, 44px);
+  height: clamp(36px, 9vw, 44px);
+  color: var(--f-muted);
+  transition: color 0.2s;
+}
+.tun-footer__social a:hover {
+  color: var(--f-accent);
+}
+.tun-footer__social svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.tun-footer__line {
+  border: 0;
+  border-top: 1px solid var(--f-line);
+  margin: 0;
+}
+.tun-footer .tun-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0;
+  padding: 1.75rem 0 1.25rem;
+}
+.tun-footer__links li {
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.tun-footer__links{
+  background-color: #1c2143;
+}
+.tun-footer__links li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin: 0 1.1rem;
+  background: var(--f-line);
+  vertical-align: -0.15em;
+  border-radius: 2px;
+}
+.tun-footer__links a {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+.tun-footer__links a:hover {
+  color: var(--f-accent);
+}
+.tun-footer__small {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--f-muted);
+}
+.tun-footer__small a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  font-size: 1.6rem;
+}
+.tun-footer__small a:hover {
+  color: var(--f-accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tun-footer * {
+    transition: none !important;
+  }
+}
+
+.tun-footer__divider {
+  flex: none;
+  align-self: stretch;
+  width: 2px;
+  min-height: 80px;
+  background: var(--f-line);
+  margin-left: auto;
+}
+.tun-footer .tun-footer__feature {
+  flex: 0 1 auto;
+  max-width: 11em;
+  font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 6vw, 2.6rem);
+  line-height: 1.05;
+  color: var(--f-text);
+  transition: color 0.2s;
+}
+.tun-footer .tun-footer__feature:hover {
+  color: var(--f-accent);
+}
+.tun-footer .tun-footer__top {
+  gap: clamp(1rem, 3vw, 2rem);
+}
+.tun-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+}
+.tun-footer .tun-footer__social {
+  justify-content: flex-start;
+}
+
+
+
+/* REPONSIVE DESIGNINGS */
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .site-header {
+    padding: 1rem 4rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 2.5rem;
+    z-index: auto;
+    background: none;
+  }
+
+  .nav a {
+    font-size: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
+
+/* brand-strip */
+
+@media (max-width: 669.33px) {
+  .branded-strip {
+    font-size: 10px;
+  }
+}
+@media (max-width: 430px) {
+  .branded-strip {
+    gap: 18px;
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 1374.67px) {
+  .unlabel-img {
+    /* border-radius: 30px; */
+    justify-content: center;
+    /* margin-top: 100px;
+    margin-bottom: 70px;
+    margin-left: 100px;
+    margin-right: -40000px; */
+    height: 750px;
+  }
+
+  .motto {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer{
+  text-align:center;
+  background-color: #1c2143;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+ .lgo{
+  padding: 20px;
+  margin-bottom: -5px;
+ }
+ .logo-text{
+  margin-top: -26px;
+  font-size: 22px;
+ }
+}
+
+/* @media (max-width:1374.67px) {
+  .unlabelDiv{
+    he
+  }
+ }  */
+
+</style>
+</head>
+<body>
+
+  <!-- The five hidden radio buttons control which tab is showing -->
+<input type="radio" name="tab" id="t1" checked aria-label="Who we are">
+<input type="radio" name="tab" id="t2" aria-label="What we do">
+<input type="radio" name="tab" id="t3" aria-label="How we work">
+<input type="radio" name="tab" id="t4" aria-label="Our team">
+<!-- <input type="radio" name="tab" id="t5" aria-label="2026–2027 goals"> -->
+
+<header class="site-header">
+  <a class="brand">THE UNLABEL NETWORK</a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span>
+  </button>
+  <nav id="nav" class="nav">
+    <a href="index.html">Home</a>
+    <a href="About Us.html">About Us</a>
+    <a href="Contact Us.html">Get Involved</a>
+    <a href="Blog.html">Blog</a>
+    <a href="Contact Us.html">Contact Us</a>
+  </nav>
+</header>
+
+<section class="hero">
+   <div class="wrap">
+    <div class="logo">UN &nbsp;The Unlabel Network</div>
+    <h1>More than a <s>label</s>.</h1>
+    <p>A youth-led initiative raising awareness about stigmatized health conditions and experiences, with accurate information, dignity, and lived experience at the center.</p>
+  </div>
+</section>
+
+<section class="branded"> 
+  <div class="branded-strip">
+    <span>EDUCATE</span>
+    <i>*</i>
+    <span>AMPLIFY</span>
+    <i>*</i>
+    <span>ADVOCATE</span>
+    <i>*</i>
+    <span>CONNECT</span>
+  </div>
+  <hr>
+</section>
+
+<section class="section-2">
+  <div class="motto"><h1>MORE THAN A LABEL MORE THAN A DIAGNOSIS</h1></div>
+  <div class="unlabelDiv">
+    <img src="IMG-20261023-WA0016(1).jpg" alt="unlabel img" class="unlabel-img">
+  </div>
+</section>
+
+<section class="section-3" >
+<nav>
+    <div class="wrap">
+      <!-- <label for="t1">Who we are</label> -->
+      <label for="t2">What we do</label>
+      <label for="t3">How we work</label>
+      <label for="t4">Our team</label>
+      <!-- <label for="t5">2026–2027</label> -->
+    </div>
+  </nav>
+</section>
+
+<main class="wrap">
+
+  <!-- 1. WHO WE ARE
+  <section class="panel" id="p1">
+    <h2>Who we are</h2>
+    <p class="lead">We exist so people are understood as people, not reduced to a diagnosis or a stereotype.</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <div class="card"><h3>Our mission</h3><ul>
+        <li>Raise awareness about stigmatized health conditions and experiences</li>
+        <li>Educate communities with accurate and accessible information</li>
+        <li>Amplify lived experiences with dignity</li>
+        <li>Advocate for greater understanding and inclusion</li>
+        <li>Build connections between people and communities</li></ul></div>
+      <div class="card"><h3>Our vision</h3><ul>
+        <li>People are not reduced to stereotypes</li>
+        <li>People with lived experience are heard</li>
+        <li>Individuals are represented with dignity</li>
+        <li>Communities are included in decisions that affect them</li>
+        <li>Differences are understood, not automatically stigmatized</li>
+        <li>Awareness leads to meaningful action</li></ul></div>
+    </div>
+    <div class="grid" style="margin-top:14px">
+      <div class="pillar"><h3>Education</h3><p>Making complex health and social topics understandable and accessible.</p></div>
+      <div class="pillar"><h3>Storytelling</h3><p>Creating space for people to share their experiences on their own terms.</p></div>
+      <div class="pillar"><h3>Advocacy</h3><p>Using evidence and community voices to encourage positive change.</p></div>
+      <div class="pillar"><h3>Community</h3><p>Connecting people, schools, organizations, professionals, and partners around inclusion.</p></div>
+    </div>
+  </section> -->
+
+   <!-- 2. WHAT WE DO -->
+  <section class="panel" id="p2">
+    <h2>What we do</h2>
+    <p class="lead">Four programs, each with a clear purpose, audience, objectives, and intended outcomes.</p>
+    <details open><summary>Beyond the Label<small>Publication and storytelling</small></summary>
+      <p>Our publication amplifies lived experiences and invites willing participants to share their stories. Written content educates the public and challenges stereotypes, and every contributor can define their own experience.</p></details>
+    <details><summary>Design for Dignity<small>Community and inclusion</small></summary>
+      <p>We build inclusion <em>with</em> the community. Students, teachers, staff, administrators, families, and organizations help shape the solution.</p>
+      <p>Our cycle: listen, ask, design, get feedback, improve.</p></details>
+    <details><summary>Workshops &amp; Events<small>Education and engagement</small></summary>
+      <p>Interactive online sessions, plus in-person events in schools, libraries, hospitals, community spaces, and partner locations.</p></details>
+    <details><summary>Chapters<small>Community expansion</small></summary>
+      <p>A chapter extends our mission into a local community. Each has a clear purpose, engages its community, follows shared systems, reports its progress, and stays accountable.</p></details>
+  </section>
+
+    <!-- 3. HOW WE WORK -->
+  <section class="panel" id="p3">
+    <h2>How we work</h2>
+    <p class="lead">Every initiative moves through the same seven steps.</p>
+    <ol class="steps grid">
+      <li class="card"><b>Idea</b>Identify a need or opportunity.</li>
+      <li class="card"><b>Program design</b>Define the purpose, audience, and intended outcomes.</li>
+      <li class="card"><b>Development</b>Research, write, design, and prepare.</li>
+      <li class="card"><b>Outreach</b>Communicate and engage the intended audience.</li>
+      <li class="card"><b>Implementation</b>Deliver the program or initiative.</li>
+      <li class="card"><b>Feedback</b>Listen to participants and the community.</li>
+      <li class="card"><b>Improvement</b>Use what we learned to make the next version better.</li>
+    </ol>
+  </section>
+
+    <!-- 4. OUR TEAM -->
+  <section class="panel" id="p4">
+    <h2>Our team</h2>
+    <p class="lead">Executive leaders set direction and oversee quality. Four departments turn ideas into programs, stories, visuals, and public communication.</p>
+    <!-- <div class="chart">
+      <div class="row"><div class="node"><b>CEO / Founder &amp; Executive Director</b><small>Vision, strategy, organizational leadership</small></div></div>
+      <div class="row">
+        <div class="node"><b>COO</b><small>Operations, systems, coordination</small></div>
+        <div class="node"><b>CPO</b><small>Programs, quality, impact</small></div>
+        <div class="node future"><b>CFO (future)</b><small>Financial leadership, sustainability</small></div>
+      </div> -->
+      <div class="row">
+        <div class="node dept"><b>Creative</b><small>Graphics, visual storytelling, brand consistency</small></div>
+        <div class="node dept"><b>Editorial</b><small>Research, verification, contributor stories</small></div>
+        <div class="node dept"><b>Programs &amp; Initiatives</b><small>Planning, delivery, feedback, results</small></div>
+        <div class="node dept"><b>Social Media &amp; Communications</b><small>Publishing, engagement, promotion</small></div>
+      </div>
+    </div>
+    <p>Programs identifies the need, Editorial verifies the information, Creative turns it into visuals, and Communications shares it.</p>
+  </section>
+
+    <!-- 5. GOALS
+  <section class="panel" id="p5">
+    <h2>2026–2027 goals</h2>
+    <p class="lead">By the end of this year, we aim to have completed:</p>
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
+      <div class="stat"><b>3</b>Online workshops</div>
+      <div class="stat"><b>2</b>In-person workshops</div>
+      <div class="stat"><b>1</b>Design for Dignity program</div>
+      <div class="stat"><b>1</b>Chapter</div>
+    </div>
+  </section> -->
+
+    <div class="cta">
+    <h2>You can be part of the work</h2>
+    <p class="cta-text">Share your story, partner on a workshop, start a chapter, or join a team.
+      <br>
+      Feel like you are ready to make an impact?
+    </p>
+    <!-- <a class="btn" href="#"> Join the network</a> -->
+     <p class="bttn">You can join the network</p>
+    <a class="btn" href="Get involved.html">Get involved</a>
+  </div>
+</main>
+
+<footer class="tun-footer">
+  <div class="tun-footer__wrap">
+
+    <div class="tun-footer__top">
+      <a href="index.html#header" aria-label="The Unlabel Network, home" alt="unlabel-logo">
+        <img class="tun-footer__logo" src="unlabel-logo-light-640.png" alt="The Unlabel Network" width="640" height="575"> 
+      </a>
+      <span class="tun-footer__divider" aria-hidden="true"></span>
+      <h1 class="tun-footer__feature" >Beyond the Label</h1>
+    </div>
+
+
+    <hr class="tun-footer__line">
+
+    <nav aria-label="Footer">
+      <ul class="tun-footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Get involved.html">Get Involved</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact Us.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="tun-footer__bottom">
+  <p class="tun-footer__small"><a href="mailto:unlabelNetwork@gmail.com">theunlabelnetwork@gmail.com</a>· © 2026 The Unlabel Network</p>
+      <ul class="tun-footer__social" aria-label="Social media">
+        <li><a href="https://www.facebook.com/profile.php?id=61593780642925" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path fill="#1c2143" d="M13 19 V13 H15.2 L15.6 10.4 H13 V9 C13 8.2 13.3 7.7 14.4 7.7 H15.7 V5.5 C15.4 5.5 14.7 5.4 13.8 5.4 C11.9 5.4 10.6 6.6 10.6 8.7 V10.4 H8.4 V13 H10.6 V19 Z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/themedicine_advocate" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a></li>
+        <li><a href="mailto:theunlabelnetwork@gmail.com" aria-label="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 7.5 12 13.5 20.5 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('nav');
+toggle.addEventListener('click',() =>{
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+}) 
+
+</script>
+</body>
+</html>

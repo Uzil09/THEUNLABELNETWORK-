@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE UNLABEL NETWORK</title>
+<meta name="description" content="More than a label. More than a diagnosis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#003370;
+  --ink:#1c2230;
+  --mist:#bfcbdd;
+  --steel:#41648f;
+  --white:#fff;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{
+  scroll-behavior:smooth;
+ 
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+  .hero{
+    border-left: 40px solid #1c2143;
+  }
+
+
+header{
+  border-left: 10px solid #1c2143;
+}
+
+
+.header-img{
+  border-left: none;
+}
+
+
+li{
+  font-size: 30px;
+}
+
+html body{
+  max-width: 100%;
+}
+
+p, li, h1, h2, h3, a{
+  overflow-wrap: anywhere;
+}
+
+/* img */
+.header-img{
+  max-width: 100%;
+  min-height: fit-content;
+
+}
+
+body{
+  margin:0;
+  font-family:var(--sans);
+  color: #1c2143;
+  background: #f8efe7;
+  line-height:1.5;
+  font-size:1.25rem;
+}
+ul.lead li{
+  font-size: 25pt;
+  line-height: 50px;
+  margin-left: 10px;
+  list-style-type: none;
+  color: #003370;
+}
+
+.lead hr{
+  color:white
+}
+
+ .li{
+  width: 100% ;
+  font-weight: 900;
+  padding: 1rem 0;
+  border-top: 5px solid;
+}
+
+.ul-1{
+  font-weight: 900;
+  color: #003370;
+}
+
+.ul-2{
+  color: #003370;
+  font-weight: 900;
+}
+
+a{
+  color:inherit
+}
+
+hr{
+  background-color: white;
+  height: 3px;
+  width: 100%;
+}
+
+.line{
+  width: 100%;
+  height: 2px;
+  background-color: #ff7f50;
+  border-top: 2px solid #ff7f50;
+  margin: 0;
+  border: 0;
+}
+
+:focus-visible{
+  outline:3px solid var(--steel);
+  outline-offset:3px
+}
+
+/* Header + mobile menu */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:.9rem 1.5rem;
+  background:var(--white);
+  border-bottom:1px solid var(--mist);
+}
+
+.brand{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.4rem;
+  text-decoration:none;
+  letter-spacing:.02em
+}
+
+.menu-toggle{
+  background:none;
+  border:0;
+  width:44px;
+  height:44px;
+  cursor:pointer;
+  display:grid;
+  place-content:center;
+  gap:7px
+}
+
+.menu-toggle span{
+  display:block;
+  width:26px;
+  height:2px;
+  background:var(--navy);
+  transition:transform .25s
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(4.5px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+.nav{
+  position:fixed;
+  inset:0;
+  background:var(--white);
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  gap:2rem;
+  padding-top:7rem;
+  z-index:-1
+}
+
+.nav.open{
+  display:flex
+}
+
+.nav a{
+  text-decoration:none;
+  font-size:1.5rem
+}
+
+.nav a:hover{
+  color: #ff7f50
+}
+
+a{
+  font-size: 30px;
+}
+
+/* Type */
+h1,h2,h3{
+  font-family:var(--serif);
+  font-weight:500;
+  text-transform:uppercase;
+  line-height:1.05;
+  margin:0 0 1.25rem
+}
+
+h1{
+  font-size:clamp(3rem,10vw,5.5rem)
+}
+
+h2{
+  font-size:clamp(2.8rem,9vw,4.5rem)
+}
+
+h3{
+  font-size:clamp(2.2rem,7vw,3rem);
+  color: #1c2143;
+}
+
+p{
+  margin:0 0 1.25rem
+}
+
+.lead{
+  font-size:2rem;
+  line-height:1.55;
+  max-width:46ch
+}
+
+/* Layout */
+.hero,.section{
+  padding:4rem 1.5rem
+}
+
+.hero{
+  padding-top:5rem
+}
+
+.hero p{
+  max-width:34ch;
+  font-size:1.5rem
+}
+
+.center{
+  text-align:center
+}
+
+.center .lead{
+  margin-inline:auto
+}
+
+/* Buttons */
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  font-size:1.3rem;
+  padding:.7rem 2rem;
+  transition:background .2s,color .2s
+}
+
+.btn-solid{
+  background:var(--navy);
+  color:var(--white);
+  border-radius:999px
+}
+
+.btn-solid:hover{
+  background: #ff7f50
+}
+
+.btn-outline{
+  border:2px solid var(--navy);
+  border-radius:999px;
+  color: #1c2143;
+  letter-spacing:.04em
+}
+
+.btn-outline:hover{
+  background: #ff7f50;
+  color:var(--white)
+}
+
+.btn-outline.square{
+  border-radius:0;
+  border-color: #1c2143;
+  color:var(--steel);
+  padding:1rem 2.5rem;
+  letter-spacing:.12em
+}
+
+/* Approach pillars */
+.pillar{
+  border-top:2px solid #ff7f50;
+  margin-top:2.5rem;
+  padding-top:2rem;
+}
+
+.pillar:first-of-type{
+  margin-top:3rem
+}
+
+.pillar p{
+  font-size:1.5rem;
+  max-width:30ch
+}
+
+/* Event tiles */
+.tiles{
+  display:grid;
+  gap:.1.5rem;
+  justify-items: center;
+  align-items: stretch;
+  width: min(100% - 3rem, 1100px);
+  margin: 0 auto 4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.tile{
+  width: min(100%, 250px);
+  min-width: 0;
+  padding: 1.2rem;
+  background:var(--mist);
+  aspect-ratio: 1/1;
+  color: #1c2143;
+  text-align:center;
+  border: 5px solid #ff7f50;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.tile h3{
+  width: 100%;
+  font-family:var(--sans);
+  font-size: clamp(.78rem, 1.5vw, 1.08rem);
+  font-weight: 700px;
+  line-height: 1.2;
+  margin: 0 0 .65rem;
+  letter-spacing:.015em;
+  text-transform:uppercase;
+  margin-bottom:1rem;
+  text-wrap: balance;
+  white-space: nowrap;
+  overflow-wrap: normal; 
+}
+
+
+
+.tile p{
+  font-size: clamp(.72rem, 1.1vw, .88rem);
+  line-height: 1.4;
+  width: 100%;
+  max-width: 22ch;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* FOOTER */
+
+/* Footer: dark layout, drop-in. All classes start with .tun-footer so nothing clashes with page CSS */
+.tun-footer {
+  --f-bg: #1c2143;
+  --f-text: #f8efe7;
+  --f-muted: #b9c0d8;
+  --f-line: #434b73;
+  --f-accent: #ff7f50;
+  background: var(--f-bg);
+  color: var(--f-text);
+  font-family: var(--sans, "Hanken Grotesk", system-ui, sans-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  border-top: 6px solid var(--f-accent);
+  padding: clamp(2rem, 6vw, 3.5rem) 0
+    calc(2rem + env(safe-area-inset-bottom, 0px));
+}
+.tun-footer * {
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+.tun-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.tun-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+.tun-footer a:focus-visible {
+  outline: 3px solid var(--f-accent);
+  outline-offset: 3px;
+}
+.tun-footer__wrap {
+  width: min(100% - 2.5rem, 72rem);
+  margin-inline: auto;
+}
+.tun-footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem clamp(1rem, 4vw, 2rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
+}
+.tun-footer__logo {
+  display: block;
+  width: clamp(120px, 30vw, 190px);
+  height: auto;
+}
+.tun-footer .tun-footer__social {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  gap: clamp(0.9rem, 3.5vw, 1.6rem);
+  margin: 0;
+}
+.tun-footer__social a {
+  display: block;
+  width: clamp(36px, 9vw, 44px);
+  height: clamp(36px, 9vw, 44px);
+  color: var(--f-muted);
+  transition: color 0.2s;
+}
+.tun-footer__social a:hover {
+  color: var(--f-accent);
+}
+.tun-footer__social svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.tun-footer__line {
+  border: 0;
+  border-top: 1px solid var(--f-line);
+  margin: 0;
+}
+.tun-footer .tun-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0;
+  padding: 1.75rem 0 1.25rem;
+}
+.tun-footer__links li {
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.tun-footer__links li:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin: 0 1.1rem;
+  background: var(--f-line);
+  vertical-align: -0.15em;
+  border-radius: 2px;
+}
+.tun-footer__links a {
+  display: inline-block;
+  padding: 0.25rem 0;
+}
+.tun-footer__links a:hover {
+  color: var(--f-accent);
+}
+.tun-footer__small {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--f-muted);
+}
+.tun-footer__small a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  font-size: 1.6rem;
+}
+.tun-footer__small a:hover {
+  color: var(--f-accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .tun-footer * {
+    transition: none !important;
+  }
+}
+
+.tun-footer__divider {
+  flex: none;
+  align-self: stretch;
+  width: 2px;
+  min-height: 80px;
+  background: var(--f-line);
+  margin-left: auto;
+}
+.tun-footer .tun-footer__feature {
+  flex: 0 1 auto;
+  max-width: 11em;
+  font-family: var(--serif, "Cormorant Garamond", Georgia, serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 6vw, 2.6rem);
+  line-height: 1.05;
+  color: var(--f-text);
+  transition: color 0.2s;
+}
+.tun-footer .tun-footer__feature:hover {
+  color: var(--f-accent);
+}
+.tun-footer .tun-footer__top {
+  gap: clamp(1rem, 3vw, 2rem);
+}
+.tun-footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 2rem;
+}
+.tun-footer .tun-footer__social {
+  justify-content: flex-start;
+}
+
+/* Desktop */
+@media (min-width:1200px){
+  .site-header{
+    padding:1rem 4rem
+  }
+
+  .menu-toggle{
+    display:none
+  }
+
+  .header-img{
+    height: 1500px;
+  }
+
+  .nav{
+    position:static;
+    display:flex;
+    flex-direction:row;
+    padding:0;
+    gap:2.5rem;
+    z-index:auto;
+    background:none
+  }
+
+  .nav a{
+    font-size:1.1rem
+  }
+
+  .hero,.section{
+    padding:6rem 4rem;
+    max-width:72rem;
+    margin-inline:auto
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *{
+    transition: none!important;
+  }
+}
+
+@media (max-width: 750px ) {
+  li{
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  li{
+    font-size: 25px;
+  }
+}
+
+
+@media (max-width:350px) {
+  .pillar h3{
+    font-size:1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .tile{
+    width: min(100%, 245px);
+    padding: 1.35rem;
+  }
+
+  .tile h3{
+    font-size: clampp(.85rem, 4vw, 1rem);
+  }
+
+  .tile p{
+    font-size: .8rem;
+  }
+
+  .tiles{
+    width: min(100% - 2rem, 300px);
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .tiles{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+</style>
+</head>
+<body>
+
+<header id="header" class="site-header">
+  <a class="brand" href="#home">THE UNLABEL NETWORK</a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+    <span></span><span></span>
+  </button>
+  <nav id="nav" class="nav">
+    <a href="index.html">Home</a>
+    <a href="About Us.html">About Us</a>
+    <a href="Get involved.html">Get Involved</a>
+    <a href="Blog.html">Blog</a>
+    <a href="Contact Us.html">Contact Us</a>
+  </nav>
+</header>
+<section>
+  <img src="The unlabels.png" alt="unlabel logo" class="header-img">
+</section>
+
+<hr class="line">
+
+
+  <section class="hero">
+    <!-- TODO: replace with your real hero headline -->
+    <div>
+      <h1>More than a label. More than a diagnosis
+       </h1>
+      <p>Building a supportive community of curious minds and future medicine changemakers.</p>
+      <a class="btn btn-outline" href="About Us.html">Learn More</a>
+    </div>
+  </section>
+   
+
+  <section class="section">
+    <h2>Our Mission</h2>
+    <p class="lead lead-1">
+      The Unlabel Network is a youth-led initiative dedicated to:
+      <ul class="ul-1">
+     
+      <li class="li"> Raising awareness about stigmatized health conditions and experiences</li>
+      
+      <li class="li"> Educating communities with accurate and accessible information</li>
+      
+      <li class="li"> Amplifying lived experiences with dignity</li>
+      
+      <li class="li">Advocating for greater understanding and inclusion</li>
+      
+      <li class="li"> Building connections between people and communities</li>
+      
+      </ul>
+    </p>
+    <a class="btn btn-solid" href="About Us.html">Explore</a>
+  </section>
+
+  <section class="section">
+    <h2>Our Vision</h2>
+    <p class="lead lead-2">We envision communities where:
+      <ul class="ul-2">
+   
+      <li class="li">People are not reduced to stereotypes</li>
+
+      <li>People with lived experience are heard</li>
+
+      <li class="li">Individuals are represented with dignity</li>
+      
+      <li class="li">Communities are included in decisions that affect them</li>
+ 
+      <li class="li">Differences are understood rather than automatically stigmatized</li>
+
+      <li class="li">Awareness leads to meaningful action</li>
+    
+      </ul>
+    </p>
+    <a class="btn btn-solid" href="Get involved.html">Join Us</a> <br> <br>
+    <hr>
+    <article class="pillar">
+      <h3>Education</h3>
+      <p>Breaking down complex medical topics into simple and accurate medical content.</p>
+    </article>
+    <hr>
+    <article class="pillar">
+      <h3>Inspire &amp; Empower</h3>
+      <p>Inspiring students to explore healthcare careers</p>
+    </article>
+    <hr>
+    <article class="pillar">
+      <h3>Real Conversations</h3>
+      <p>Connecting students with healthcare professionals and real-world stories.</p>
+    </article>
+    <hr>
+    <article class="pillar">
+      <h3>Community Engagement</h3>
+      <p>Building a supportive community of curious minds and future medicine changemakers.</p>
+    </article>
+  </section>
+
+<section class="section tiles-section">
+  <div class="tiles-heading">
+    <h2>The Four Pillars of TUN</h2>
+    <div class="tiles">
+    <article class="tile">
+      <h3>EDUCATION</h3>
+      <p >Making complex health and social topics understandable and accessible.</p>
+    </article>
+    <article class="tile">
+      <h3>STORYTELLING</h3>
+      <p>Creating space for people to share their experiences on their own terms.</p>
+    </article>
+    <article class="tile">
+      <h3>ADVOCACY</h3>
+      <p>Using evidence and community voices to encourage positive change.</p>
+    </article>
+    <article class="tile">
+      <h3>COMMUNITY</h3>
+      <p>Connecting people, schools, organizations, professionals, and partners around inclusion</p>
+    </article>
+   </div>
+  </div>
+</section>
+
+  <section class="section center">
+    <h2>Get Involved</h2>
+    <p class="lead">Have a passion for medicine, science, writing, design or outreach? Join The Unlabel Network and help make medicine understood and accessible to people.</p>
+    <a class="btn btn-outline square" href="Get involved.html">Learn More</a>
+  </section>
+
+
+<footer class="tun-footer">
+  <div class="tun-footer__wrap">
+
+    <div class="tun-footer__top">
+      <a href="index.html#header" aria-label="The Unlabel Network, home" alt="unlabel-logo">
+        <img class="tun-footer__logo" src="unlabel-logo-light-640.png" alt="The Unlabel Network" width="640" height="575"> 
+      </a>
+      <span class="tun-footer__divider" aria-hidden="true"></span>
+      <h1 class="tun-footer__feature" >Beyond the Label</h1>
+    </div>
+
+
+    <hr class="tun-footer__line">
+
+    <nav aria-label="Footer">
+      <ul class="tun-footer__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="Get involved.html">Get Involved</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact Us.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="tun-footer__bottom">
+  <p class="tun-footer__small"><a href="mailto:unlabelNetwork@gmail.com">theunlabelnetwork@gmail.com</a>· © 2026 The Unlabel Network</p>
+      <ul class="tun-footer__social" aria-label="Social media">
+        <li><a href="https://www.facebook.com/profile.php?id=61593780642925" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="currentColor"/><path fill="#1c2143" d="M13 19 V13 H15.2 L15.6 10.4 H13 V9 C13 8.2 13.3 7.7 14.4 7.7 H15.7 V5.5 C15.4 5.5 14.7 5.4 13.8 5.4 C11.9 5.4 10.6 6.6 10.6 8.7 V10.4 H8.4 V13 H10.6 V19 Z"/></svg></a></li>
+        <li><a href="https://www.instagram.com/themedicine_advocate" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a></li>
+        <li><a href="mailto:theunlabelnetwork@gmail.com" aria-label="Email us"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 7.5 12 13.5 20.5 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+// Mobile menu
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('nav');
+toggle.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', open);
+  toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open');
+  toggle.setAttribute('aria-expanded', 'false');
+}));
+
+
+
+
+</script>
+</body>
+</html>
