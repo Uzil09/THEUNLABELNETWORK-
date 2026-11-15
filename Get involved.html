@@ -771,7 +771,7 @@ form.addEventListener("submit", function (e) {
   const json = JSON.stringify(object);
   result.innerHTML = "Please wait......";
 
-  fetch("https://api.web3forms.com/submmit", {
+  fetch("https://api.web3forms.com/submmit.", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -792,8 +792,7 @@ form.addEventListener("submit", function (e) {
       console.log(error);
       result.innerHTML = "Something went wrong!";
     })
-    .then(function () {
-      form.requestFullscreen();
+    .then(function ()
       setTimeout(() => {
         result.style.display = "none";
       }, 3000);
